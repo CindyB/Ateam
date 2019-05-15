@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
-
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView ivPicture;
         TextView tvName;
@@ -20,7 +19,6 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
             tvName = view.findViewById(R.id.tv_name);
         }
     }
-
     private ArrayList<CardInfo> cardInfoArrayList;
     MyAdapter(ArrayList<CardInfo> cardInfoArrayList){
         this.cardInfoArrayList = cardInfoArrayList;
@@ -41,7 +39,6 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
         myViewHolder.ivPicture.setImageResource(cardInfoArrayList.get(position).drawableId);
         myViewHolder.tvName.setText(cardInfoArrayList.get(position).name);
     }
-
     @Override
     public int getItemCount() {
         return cardInfoArrayList.size();
